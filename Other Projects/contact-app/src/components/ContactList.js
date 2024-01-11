@@ -3,11 +3,16 @@ import ContactCard from './ContactCard';
 
 const ContactList = (props) => {
 
-    const renderContactList = props.contacts.map((contact) => {
-        return(
-           <ContactCard  contact = {contact}></ContactCard>
-        );
-    })
+  const deleteContactHandler = (id) => {
+    props.getContactId(id);
+  };
+
+  const renderContactList = props.contacts.map((contact) => {
+    return (
+        <ContactCard key={contact.id} contact={contact} clickHandler={deleteContactHandler}/>
+    );
+})
+
 
   return (
     <div className="ui celled list">
