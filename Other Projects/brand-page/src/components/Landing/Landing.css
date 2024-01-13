@@ -1,0 +1,80 @@
+
+
+.landing{
+    display: flex;
+    padding: 10vh 6vw;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+
+.left h1{
+    text-transform: uppercase;
+    font-family: Poppins-bold;
+    font-size: 108px;
+    letter-spacing: -4px;
+    
+    width: 90%;
+    line-height: 102px;
+}
+
+.lower{
+    text-transform: uppercase;
+    
+    width: 404px;
+}
+
+.lower p{
+    font-family: Poppins-Reg;
+    color: #5a5959;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.lower2{
+    padding-top: 2vh;
+    display: flex;
+    width: 34%;
+    justify-content: space-between;
+}
+
+.lower2 button{
+    padding: 6px 16px;
+    font-size: 16px;
+    width: 118px;
+    font-family: Poppins-Reg;
+}
+
+.lower2 .btn1{
+    background-color: #d01c28;
+    border: none;
+    color: white;
+}
+
+.lower2 .btn2{
+    background-color: white;
+    border: 1px solid #5a5959;
+    color: #5a5959
+}
+
+.lower3{
+    padding-top: 2vh;
+    text-transform: capitalize;
+    font-family: Poppins-Reg;
+    font-size: 1.1rem;
+}
+
+.lower4-img{
+    padding-top: 1vh;
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

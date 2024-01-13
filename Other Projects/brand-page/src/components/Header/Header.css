@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Poppins-Reg;
+    src: url(../../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-bold;
+    src: url(../../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-black;
+    src: url(../../fonts/Poppins-Black.ttf);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 4vw;
+}
+
+h3{
+    font-family: "Poppins-Reg";
+}
+
+.btn{
+    font-family: Poppins-Reg;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 6px 16px;
+    border: none;
+    background-color: #d01c28;
+    font-size: 1.2rem;
+}
+
+
+
+.links {
+    display: flex;
+    width: 40%;
+    
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
