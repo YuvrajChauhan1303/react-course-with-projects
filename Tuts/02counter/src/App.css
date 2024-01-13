@@ -1,0 +1,13 @@
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left : 40vw;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+  gap: 30px;
+}
