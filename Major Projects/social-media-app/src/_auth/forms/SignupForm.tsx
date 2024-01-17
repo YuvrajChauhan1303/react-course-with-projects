@@ -1,4 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import {Link} from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,10 +14,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { SignupValidation } from "@/lib/validation";
 import { z } from "zod";
+import { Loader } from "lucide-react";
 
 const SignupForm = () => {
 
-    const isLoading = true;
+    const isLoading = false;
 
   const form = useForm<z.infer<typeof SignupValidation>>({
     resolver: zodResolver(SignupValidation),
@@ -29,9 +31,10 @@ const SignupForm = () => {
   });
 
   function onSubmit(values: z.infer<typeof SignupValidation>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    //create a user!!
+    
+    // const newUser = await createUserAccount(values);
+    
   }
 
   return (
@@ -40,8 +43,8 @@ const SignupForm = () => {
         <img src="/assets/images/logo.svg" alt="logo" />
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12"> Create a New Account </h2>
-        <p className="text-light-3 small-medium md:base-regular">
-          To use SnapGram, enter your details
+        <p className="text-light-3 small-medium md:base-regular pt-2">
+          To use SnapGram, please enter your details
         </p>
 
         <form
@@ -125,12 +128,17 @@ const SignupForm = () => {
              {
                 isLoading ? (
                     <div className="flex-center gap-2">
-                        Loading...
+                        <Loader /> Loading...
                     </div>
                 ) : 
                 "Sign-Up"
              }
           </Button>
+          <p className="text-small-regular text-light-2 text-center mt-2">
+
+             Already Have an Account? 
+             <Link to = '/sign-in' className="text-primary-500 text-small-semibold ml-1">Log in</Link>
+          </p>
         </form>
       </div>
     </Form>
