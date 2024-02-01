@@ -1,34 +1,54 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // let sections = ;
+
+  useEffect = () => {
+
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <div>
+      <section className='sec-1 show-animate'>
+        <h1 className='animate'>
+            Hi I'm Yuvraj!
+        </h1>
+        <p className='animate'>Lorem ipsum dolor sit amet.</p>
+      </section>
+
+      <section className='sec-2'>
+        <h1 className='animate'>
+            Keep Scrolling
+        </h1>
+        <p className='animate'>Lorem ipsum dolor sit amet.</p>
+      </section>
+
+      <section className='sec-3'>
+        <h1 className='animate'>
+            Nice
+        </h1>
+        <p className='animate'>Lorem ipsum dolor sit amet.</p>
+      </section>
+
+      <section className='sec-4'>
+        <h1 className='animate'>
+            Very Good
+        </h1>
+        <p className='animate'>Lorem ipsum dolor sit amet.</p>
+      </section>
+
+      <section className='sec-5'>
+       <div className='images'>
+          <img src="img/1.jpg" alt="" />
+          <img src="img/2.jpg" alt="" />
+          <img src="img/3.jpg" alt="" />
+       </div>
+      </section>
+   </div>
   )
 }
 

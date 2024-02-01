@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  document.addEventListener("mousemove", function(dets){
+    document.querySelectorAll(".img").forEach((e) => {
+      const position = e.getAttribute("value");
+      let x = (window.innerWidth - dets.clientX * position)/ 50;
+      let y = (window.innerHeight - dets.clientY * position) / 50;
+
+      e.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+  })
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <div id="main">
+    <div value = "5" className="img img1"></div>
+    <div value = "7" className="img img2"></div>
+    <div value = "4" className="img img3"></div>
+    <div value = "6" className="img img4"></div>
+    <div value = "7" className="img img5"></div>
+    <div value = "5" className="img img6"></div>
+    <div value = "4" className="img img7"></div>
+    <div value = "8" className="img img8"></div>
+   </div>
   )
 }
 
