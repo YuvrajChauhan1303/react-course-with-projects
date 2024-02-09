@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "primary-font";
+  src: url(fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family: "secondary-font";
+  src: url(fonts/FoundersGrotesk-Semibold.otf);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
