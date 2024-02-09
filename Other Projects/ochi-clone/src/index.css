@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "secondary-font";
-  src: url(fonts/FoundersGrotesk-Semibold.otf);
+  src: url(public/fonts/FoundersGroteskXCond-Lt.otf);
 }
 
 @tailwind base;
